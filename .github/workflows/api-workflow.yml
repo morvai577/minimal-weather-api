@@ -32,8 +32,8 @@ jobs:
         run: dotnet restore minimal-weather-api.sln
         working-directory: ${{env.working-directory}}
       - name: Build API project
-      - run: dotnet build --no-restore ./minimal-weather-api.Api
+        run: dotnet build --no-restore ./minimal-weather-api.Api
         working-directory: ${{env.working-directory}}
       - name: Run API unit tests
-      - run: dotnet test --no-build --verbosity normal 
+        run: dotnet test --no-build --verbosity normal 
         working-directory: ${{env.tests-directory}}
