@@ -21,6 +21,7 @@ jobs:
     name: Build API
     runs-on: ubuntu-latest
     env:
+      solution-directory: './'
       working-directory: 'src/'
       tests-directory: 'tests/minimal-weather-api.Tests.Unit/'
     steps:
@@ -30,7 +31,7 @@ jobs:
           dotnet-version: '6.0.x'
       - name: Restore dependencies
         run: dotnet restore minimal-weather-api.sln
-        working-directory: ${{env.working-directory}}
+        working-directory: ${{env.solution-directory}}
       - name: Build API project
         run: dotnet build --no-restore ./minimal-weather-api.Api
         working-directory: ${{env.working-directory}}
