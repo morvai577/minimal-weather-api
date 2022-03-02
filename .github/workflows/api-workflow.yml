@@ -1,0 +1,39 @@
+name: API workflow
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'src/**'
+      - 'tests/**'
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      
+jobs:
+  build:
+    name: Build API
+    runs-on: ubuntu-latest
+    env:
+      working-directory: 'src/minimal-weather-api.Api/'
+      tests-directory: 'tests/minimal-weather-api.Tests.Unit/'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+      - name: Restore dependencies
+        run: dotnet restore minimal-weather-api.sln
+        working-directory: ${{env.working-directory}}
+      - name: Build API project
+      - run: dotnet build --no-restore ./minimal-weather-api.Api
+        working-directory: ${{env.working-directory}}
+      - name: Run API unit tests
+      - run: dotnet test --no-build --verbosity normal 
+        working-directory: ${{env.tests-directory}}
