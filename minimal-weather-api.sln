@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BDF207E0-7689-4F1F-8904-8F70A5E0041B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CCE50D0E-0151-4122-8BEA-A9E9E1B1CD31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minimal-weather-api.Api", "src\minimal-weather-api.Api\minimal-weather-api.Api.csproj", "{C77C2E93-1B01-47A3-A171-573F7EB771D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minimal-weather-api.Tests.Unit", "tests\minimal-weather-api.Tests.Unit\minimal-weather-api.Tests.Unit.csproj", "{CE483082-0A09-4DE7-A941-B28E54E50049}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C77C2E93-1B01-47A3-A171-573F7EB771D9} = {BDF207E0-7689-4F1F-8904-8F70A5E0041B}
+		{CE483082-0A09-4DE7-A941-B28E54E50049} = {CCE50D0E-0151-4122-8BEA-A9E9E1B1CD31}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C77C2E93-1B01-47A3-A171-573F7EB771D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C77C2E93-1B01-47A3-A171-573F7EB771D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C77C2E93-1B01-47A3-A171-573F7EB771D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C77C2E93-1B01-47A3-A171-573F7EB771D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE483082-0A09-4DE7-A941-B28E54E50049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE483082-0A09-4DE7-A941-B28E54E50049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE483082-0A09-4DE7-A941-B28E54E50049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE483082-0A09-4DE7-A941-B28E54E50049}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
