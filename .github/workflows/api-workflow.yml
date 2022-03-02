@@ -21,7 +21,7 @@ jobs:
     name: Build API
     runs-on: ubuntu-latest
     env:
-      working-directory: 'src/minimal-weather-api.Api/'
+      working-directory: 'src/'
       tests-directory: 'tests/minimal-weather-api.Tests.Unit/'
     steps:
       - uses: actions/checkout@v2
